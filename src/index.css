@@ -1,1 +1,22 @@
 @import "tailwindcss";
+/* RESET - makes styling consistent across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL TYPOGRAPHY */
+html {
+  font-size: 16px;  /* base size */
+  scroll-behavior: smooth; /* smooth scrolling everywhere */
+}
+
+body {
+  font-family: "Poppins", sans-serif;   /* clean professional font */
+  color: #333;
+  background-color: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
