@@ -8,7 +8,7 @@ import Department from "./pages/department/Department";
 import Faculty from "./pages/faculty/Faculty";
 import Achievement from "./pages/achievement/Achievement";
 import Alumni from "./pages/alumni/Alumni";
-import About from "./components/about/About";
+import About from "./components/homeComponents/about/About";
 
 import "./App.css";
 
@@ -20,6 +20,7 @@ function App() {
       <div className="min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<>Home</>} /> */}
           <Route path="/profile" element={<Profile />} />
           <Route path="/department" element={<Department />} />
           <Route path="/faculty" element={<Faculty />} />

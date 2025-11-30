@@ -1,8 +1,11 @@
 import React from 'react'
+import DepartmentPage from './DepartmentPage';
 
 const Department=()=> {
   return (
-    <div>Departmental Page</div>
+    <>
+    <DepartmentPage/>
+    </>
   )
 };
 
