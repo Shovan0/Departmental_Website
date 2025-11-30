@@ -1,0 +1,164 @@
+/* Section Base Styling */
+.announcements {
+  padding: 4rem 2rem;
+  background: #f7f9fc;
+}
+
+.announcements-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 2.5rem;
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.announcements-slider {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0 2rem;
+}
+
+.announcements-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Announcement Card */
+.announcement-card {
+  min-width: 280px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.6rem;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.announcement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Badge */
+.card-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #e63946;
+  color: #fff;
+  font-size: 12px;
+  padding: 0.4rem 0.7rem;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+/* Title */
+.announcement-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f2145;
+  margin-bottom: 0.4rem;
+}
+
+/* Date */
+.announcement-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.date-icon {
+  font-size: 16px;
+  color: #527593;
+}
+
+/* Description */
+.announcement-desc {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+/* Read More Button */
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #527593;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.read-more-btn:hover {
+  background: #003bb5;
+}
+
+.arrow-icon {
+  font-size: 18px;
+}
+
+/* Slider Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #527593;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.arrow:hover {
+  background: #00347a;
+}
+
+.left {
+  left: -10px;
+}
+
+.right {
+  right: -10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1.6rem;
+  }
+
+  .left {
+    left: 5px;
+  }
+
+  .right {
+    right: 5px;
+  }
+}
