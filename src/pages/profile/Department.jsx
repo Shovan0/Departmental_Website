@@ -126,12 +126,12 @@ const Department = () => {
       </div>
 
       {/* THEORY SUBJECTS */}
-      <section className="bg-white shadow-lg rounded-lg p-5 mb-8 overflow-x-auto">
+      <section className="bg-white shadow-lg rounded-lg p-5 mb-8">
         <h2 className="text-xl font-bold mb-3 text-gray-700">
           📚 Theory Subjects
         </h2>
 
-        <table className="min-w-full border-collapse">
+        <table className="w-full border-collapse">
           <thead>
             <tr className="bg-gray-100 text-left">
               <th className="p-2 border">Subject</th>
@@ -157,10 +157,10 @@ const Department = () => {
       </section>
 
       {/* LAB SUBJECTS */}
-      <section className="bg-white shadow-lg rounded-lg p-5 mb-8 overflow-x-auto">
+      <section className="bg-white shadow-lg rounded-lg p-5 mb-8">
         <h2 className="text-xl font-bold mb-3 text-gray-700">🧪 Lab Subjects</h2>
 
-        <table className="min-w-full border-collapse">
+        <table className="w-full border-collapse">
           <thead>
             <tr className="bg-gray-100 text-left">
               <th className="p-2 border">Lab</th>
