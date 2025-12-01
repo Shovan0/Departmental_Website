@@ -1,0 +1,166 @@
+/* Entire page centered */
+.noc-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f5f7fa;
+}
+
+/* Main card */
+.noc-card {
+  width: 700px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Title */
+.noc-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+/* Inner letter box */
+.noc-letter-box {
+  background: #fafafa;
+  padding: 28px;
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  line-height: 1.7;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Gap between paragraphs */
+.noc-gap {
+  margin: 18px 0;
+}
+
+/* Large textarea input */
+.noc-input {
+  width: 100%;
+  height: 130px;
+  padding: 14px;
+  margin-top: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  resize: none;
+  transition: 0.2s;
+}
+
+.noc-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 4px rgba(74,144,226,0.4);
+}
+
+/* Submit button */
+.noc-btn {
+  width: 100%;
+  margin-top: 28px;
+  padding: 14px;
+  background: #1e73f8;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.noc-btn:hover {
+  background: #0f5bd4;
+}
+
+/* Ensuring nothing affects navbar */
+.noc-container * {
+  box-sizing: border-box;
+}
+/* Entire page centered */
+.noc-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f5f7fa;
+}
+
+/* Main card */
+.noc-card {
+  width: 700px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Title */
+.noc-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+/* Inner letter box */
+.noc-letter-box {
+  background: #fafafa;
+  padding: 28px;
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  line-height: 1.7;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Gap between paragraphs */
+.noc-gap {
+  margin: 18px 0;
+}
+
+/* Large textarea input */
+.noc-input {
+  width: 100%;
+  height: 130px;
+  padding: 14px;
+  margin-top: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  resize: none;
+  transition: 0.2s;
+}
+
+.noc-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 4px rgba(74,144,226,0.4);
+}
+
+/* Submit button */
+.noc-btn {
+  width: 100%;
+  margin-top: 28px;
+  padding: 14px;
+  background: #1e73f8;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.noc-btn:hover {
+  background: #0f5bd4;
+}
+
+/* Ensuring nothing affects navbar */
+.noc-container * {
+  box-sizing: border-box;
+}
