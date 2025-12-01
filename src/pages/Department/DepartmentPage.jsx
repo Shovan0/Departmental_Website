@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import './DepartmentPage.css';
 
 //Api Key
-const API = import.meta.env.VITE_API_BASE || 'http://localhost:4000';
+// const API = import.meta.env.VITE_API_BASE || 'http://localhost:4000';
+const API = "http://localhost:5000";
 const USE_MOCK = String(import.meta.env.VITE_USE_MOCK || '') === '1';
 const MOCK_KEY = 'mock_department';
 const MOCK_ADMIN_KEY = 'mock_admin';
