@@ -4,7 +4,9 @@ import './DepartmentPage.css';
 
 //Api Key
 // const API = import.meta.env.VITE_API_BASE || 'http://localhost:4000';
-const API = "http://localhost:5000";
+const API = import.meta.env.VITE_API_BASE || 'http://localhost:4000';
+// console.log('API base is', API);
+
 const USE_MOCK = String(import.meta.env.VITE_USE_MOCK || '') === '1';
 const MOCK_KEY = 'mock_department';
 const MOCK_ADMIN_KEY = 'mock_admin';
@@ -64,14 +66,32 @@ export default function DepartmentPage() {
           const json = await res.json();
           if (mounted) setDept(json);
 
-          // check admin
-          try {
-            const check = await fetch(`${API}/api/admin/check`, { method: 'GET', credentials: 'include' });
-            const checkJson = await check.json().catch(()=>({ isAdmin:false }));
-            if (mounted) setIsAdmin(Boolean(checkJson.isAdmin));
-          } catch {
-            if (mounted) setIsAdmin(false);
-          }
+          
+             try {
+             const res = await fetch(`${API}/api/department`, { credentials: 'include' });
+             if (!res.ok) throw new Error(`API ${res.status}`);
+             const json = await res.json();
+
+             console.log('raw department API response:', json);
+
+            // normalize:
+            // - array of docs: [{ _id, department: { ... } }]
+            // - wrapped: { department: { ... } }
+            // - or plain department object
+            let departmentObj = null;
+            if (Array.isArray(json) && json.length > 0) {
+              departmentObj = json[0].department ?? json[0];
+            } else if (json && typeof json === 'object') {
+              departmentObj = json.department ?? json;
+            }
+
+             if (mounted) setDept(departmentObj);
+            } 
+            catch (e) {
+              console.error('Error loading department:', e);
+              if (mounted) setErr(String(e.message || e));
+            }
+
         }
       } catch (e) {
         if (mounted) setErr(String(e.message || e));
@@ -245,7 +265,7 @@ export default function DepartmentPage() {
               <div className="recruiters">
                 <p className="label">Top Recruiters</p>
                 <ul>{(dept.placement?.topCompanies||[]).map((c,i)=><li key={i}>{c}</li>)}</ul>
-                {dept.placement?.reportLink && <a href={dept.placement.reportLink} target="_blank" rel="noopener noreferrer" className="download-btn">Open Placement Report</a>}
+                
               </div>
             </>
           ) : (
