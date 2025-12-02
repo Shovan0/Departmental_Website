@@ -1,0 +1,171 @@
+/* Department page styling - extended for inline editing */
+.department-container {
+  min-height: 100vh;
+  padding: 24px;
+  background: #f5f7fb;
+  color: #1f2937;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+.dept-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.dept-header h1 { font-size:24px; margin:0; }
+
+.dept-actions { display:flex; justify-content:flex-end; align-items:center; gap:8px; margin:8px 0 16px; }
+.download-pdf-btn { padding:8px 12px; border-radius:6px; border:none; background:#2563eb; color:#fff; cursor:pointer; }
+.update-note { color:#6b7280; font-size:13px; margin-right:12px; }
+.admin-badge { background:#fde68a; color:#92400e; padding:6px 10px; border-radius:8px; font-weight:600; }
+
+/* Layout */
+.placement-section { display:grid; grid-template-columns:2fr 1fr; gap:16px; margin-bottom:18px; }
+.placement-card, .holiday-card, .year-card, .fees-card, .syllabus-card { background:#fff; padding:16px; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,0.04); }
+
+.section-header { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.edit-toggle { padding:6px 10px; border-radius:8px; background:#6366f1; color:#fff; border:none; cursor:pointer; }
+
+/* Placement */
+.placement-grid { display:flex; gap:12px; margin-bottom:12px; }
+.label { color:#6b7280; font-size:12px; margin:0; }
+.value { font-weight:600; margin-top:6px; }
+.recruiters ul { margin:8px 0 0 18px; padding:0; }
+
+/* Generic edit box */
+.edit-box { background:#fff; border:1px solid #eef2ff; padding:12px; border-radius:8px; margin-top:8px; }
+.edit-box label { display:block; margin-top:8px; font-size:13px; color:#374151; }
+.edit-box input[type="text"], .edit-box input[type="number"], .edit-box input[type="date"] { padding:8px; border-radius:6px; border:1px solid #e6e9ef; width:100%; margin-top:6px; }
+
+/* inline list of top companies */
+.inline-list { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0; padding:0; list-style:none; }
+.inline-list li { display:flex; gap:6px; align-items:center; }
+
+/* small danger button */
+.small-danger { background:#ef4444; color:#fff; border:none; padding:6px 8px; border-radius:6px; cursor:pointer; }
+
+/* Timetable edit styles */
+.timetable-edit-year { margin:12px 0; padding:10px; border-radius:8px; background:#f8fafc; border:1px dashed #e6eef8; }
+
+/* Fees / Syllabus edit */
+.form-actions { display:flex; gap:8px; margin-top:12px; }
+.form-actions button { padding:8px 12px; border-radius:8px; background:#10b981; color:#fff; border:none; cursor:pointer; }
+
+/* Reuse previous stylesheet for syllabus/holiday */
+.syllabus-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
+.syllabus-item, .holiday-item { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px dashed #eef2ff; }
+.syllabus-title { font-weight:500; }
+.pdf-btn { display:inline-block; padding:6px 10px; margin-left:8px; border-radius:6px; text-decoration:none; font-size:13px; border:1px solid transparent; cursor:pointer; }
+.pdf-btn.view { background:#06b6d4; color:#fff; border-color: rgba(6,182,212,0.15); }
+.pdf-btn.download { background:#10b981; color:#fff; border-color: rgba(16,185,129,0.12); }
+.pdf-btn:hover { transform:translateY(-1px); box-shadow:0 6px 18px rgba(2,6,23,0.06); }
+
+/* holiday */
+.holiday-list { list-style:none; padding:0; margin:0; }
+.holiday-info { display:flex; flex-direction:column; gap:4px; }
+.holiday-date { color:#8896b3; font-size:13px; }
+.holiday-name { font-size:15px; }
+.holiday-actions { display:flex; align-items:center; gap:8px; }
+
+/* delete button */
+.delete-btn { margin-left:10px; padding:6px 8px; border-radius:6px; background:#ef4444; color:#fff; border:none; cursor:pointer; }
+
+.year-card, .fees-card, .syllabus-card{
+  margin-bottom: 20px;
+}
+
+
+
+
+/* ===== Table styling for holiday-card, year-card, fees-card, syllabus-card ===== */
+
+/* Wrapper to enable horizontal scroll on small screens */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Shared table style */
+.card-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;               /* encourages horizontal scroll on narrow screens */
+  font-size: 14px;
+  background: #ffffff;
+}
+
+/* Header style */
+.card-table thead th {
+  text-align: left;
+  font-weight: 700;
+  color: #11141a;
+  padding: 12px 10px;
+  background: linear-gradient(180deg, rgba(219, 224, 239, 0.6), rgba(207, 213, 235, 0.3));
+  border-bottom: 2px solid rgba(231, 223, 223, 0.143);
+}
+
+/* Body cells */
+.card-table tbody td {
+  padding: 12px 10px;
+  border-top: 1px solid rgba(12, 122, 173, 0.04);
+  color: #111827;
+  vertical-align: middle;
+}
+
+/* Row striping & hover */
+.card-table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+.card-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+.card-table tbody tr:hover {
+  background: rgba(243, 243, 244, 0.03);
+}
+
+/* Column-specific widths (tweakable) */
+.holiday-card .card-table thead th:nth-child(1),
+.holiday-card .card-table tbody td:nth-child(1) { width: 130px; min-width: 110px; }
+.holiday-card .card-table thead th:nth-child(2),
+.holiday-card .card-table tbody td:nth-child(2) { width: auto; }
+.holiday-card .card-table thead th:nth-child(3),
+.holiday-card .card-table tbody td:nth-child(3) { width: 220px; min-width: 160px; }
+
+.year-card .card-table thead th:nth-child(1) { width: 120px; min-width: 90px; }
+.year-card .card-table thead th:nth-child(2) { width: 140px; min-width: 100px; }
+.year-card .card-table thead th:nth-child(3) { width: auto; }
+
+.fees-card .card-table thead th:nth-child(1) { width: auto; }
+.fees-card .card-table thead th:nth-child(2) { width: 140px; text-align: right; }
+
+.syllabus-card .card-table thead th:nth-child(1) { width: auto; }
+.syllabus-card .card-table thead th:nth-child(2) { width: 220px; min-width: 140px; }
+
+/* Small utilities */
+.center { text-align: center; }
+.right { text-align: right; }
+
+/* Row action container */
+.row-actions { display:flex; gap:8px; align-items:center; }
+
+/* Buttons inside table rows */
+.card-table .pdf-btn, .card-table .action-btn, .card-table button {
+  padding:6px 10px;
+  border-radius:8px;
+  font-size:13px;
+  cursor:pointer;
+}
+
+/* Responsive: stack layout to single column */
+@media (max-width: 880px) {
+  .placement-section { grid-template-columns: 1fr; } /* if you use this grid */
+  .card-table { min-width: 700px; } /* encourages horizontal scroll rather than squashing */
+}
+
+/* Print: make tables print cleanly and hide interactive controls */
+@media print {
+  body * { visibility: hidden !important; }
+  .department-container, .department-container * { visibility: visible !important; }
+  .department-container { position: absolute; top: 0; left: 0; width: 100%; }
+  .card-table { min-width: 0 !important; width: 100% !important; }
+  /* hide interactive UI when printing */
+  .edit-toggle, .action-btn, .pdf-btn, .download-pdf-btn, .announce-toggle, .admin-badge, .small-danger { display: none !important; }
+}
+

@@ -1,0 +1,158 @@
+/* ========== NAVBAR MAIN CONTAINER ========== */
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* ========== LOGO ========== */
+.nav-logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ========== DESKTOP LINKS ========== */
+.nav-links-desktop {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin-left: 80px; /* push to center */
+  flex: 1;           /* help center alignment */
+  justify-content: center;
+}
+
+.nav-links-desktop li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.nav-links-desktop li a:hover {
+  color: #0066cc;
+}
+
+/* ========== SEARCH BAR (RIGHT SIDE) ========== */
+.nav-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #fafafa;
+  position: relative; /* for icon positioning */
+}
+
+.nav-search input {
+  border: none;
+  outline: none;
+  background: none;
+  padding-right: 25px; /* space for icon */
+}
+
+.search-icon {       /* React Icon Styling */
+  position: absolute;
+  right: 10px;
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+}
+
+/* ========== HAMBURGER (Mobile Only) ========== */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* ========== MOBILE MENU ========== */
+.nav-links-mobile {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: white;
+  display: none;
+  flex-direction: column;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.nav-links-mobile.active {
+  display: flex;
+}
+
+.nav-links-mobile li {
+  list-style: none;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.nav-links-mobile li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Mobile Search */
+.nav-search-mobile {
+  display: flex;
+  align-items: center;
+  margin: 15px 20px;
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  border-radius: 20px;
+  position: relative; /* for icon */
+}
+
+.nav-search-mobile input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-right: 25px;
+}
+
+.search-icon-mobile {  /* React Icon Mobile */
+  position: absolute;
+  right: 15px;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+}
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+@media (max-width: 900px) {
+
+  .nav-links-desktop {
+    display: none; /* hide desktop menus */
+  }
+
+  .nav-search {
+    display: none; /* hide desktop search */
+  }
+
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+
+  .nav-logo {
+    margin-left: 10px;
+  }
+}
