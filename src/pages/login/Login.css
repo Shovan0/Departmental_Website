@@ -1,0 +1,126 @@
+/* Full Page Center */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #eef1f6, #d7e1ec);
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+  }
+  
+  /* Card style */
+  .login-form {
+    width: 420px;
+    padding: 45px 40px;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Header text */
+  .login-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-bottom: 5px;
+  }
+  
+  /* Error styling */
+  .login-error {
+    color: #d90429;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  /* Input fields */
+  .login-input {
+    padding: 14px 18px;
+    font-size: 17px;
+    border: 2px solid #e3e3e3;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+  }
+  
+  .login-input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 8px rgba(79, 70, 229, 0.4);
+    background: #ffffff;
+  }
+  
+  /* Login button */
+  .login-btn {
+    padding: 15px;
+    background: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.35s ease;
+    letter-spacing: 0.5px;
+  }
+  
+  .login-btn:hover {
+    background: #3c35d8;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(79, 70, 229, 0.5);
+  }
+  
+  /* Password wrapper for icon placement */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Position eye icon */
+  .toggle-eye {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Extra spacing for password field to avoid overlap */
+  .password-input {
+    padding-right: 108px;
+  }
+  
+  /* Forgot password */
+  .forgot-password {
+    margin-top: -14px;
+    text-align: right;
+    font-size: 15px;
+    color: #4f46e5;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* Fade animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

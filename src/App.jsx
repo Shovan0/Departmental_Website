@@ -11,6 +11,7 @@ import About from "./components/homeComponents/about/About";
 import ApplyCertificate from "./pages/profile/forms/ApplyCertificate.jsx";
 import ApplyNOC from "./pages/profile/forms/ApplyNOC.jsx";
 import ApplyQuery from "./pages/profile/forms/ApplyQuery.jsx";
+import Login from "./pages/login/Login.jsx";
 import "./App.css";
 // import Alumni from "./pages/Alumni/Alumni.jsx";
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/profile/applyCertificate" element={<ApplyCertificate />} />
           <Route path="/profile/applyNOC" element={<ApplyNOC />} />
           <Route path="/profile/applyQuery" element={<ApplyQuery />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
 
