@@ -4,6 +4,7 @@ import "./Faculty.css"; // import CSS file
 function FacultyList() {
   const [faculty, setFaculty] = useState([]);
   const [loading, setLoading] = useState(true);
+  const API = import.meta.env.VITE_SERVER;
 
   const showAwardPopup = () => {
     alert("Awards section is under development.");
@@ -12,7 +13,7 @@ function FacultyList() {
   useEffect(() => {
     const fetchFaculty = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/faculty");
+        const res = await fetch(`${API}/api/faculty`);
         const data = await res.json();
 
         if (data.success) {

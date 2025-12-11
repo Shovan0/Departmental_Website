@@ -94,7 +94,7 @@ const DepartmentPage = () => {
   return (
     <div className="department-page">
 
-      <h1 className="dept-title">Computer Science Department</h1>
+      <h1 className="dept-title">Information Technology Department</h1>
       <p className="dept-description">
         Explore syllabus, timetable, fee structure, holidays and placements.
       </p>

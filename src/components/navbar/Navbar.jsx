@@ -10,10 +10,11 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { user, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
+  const API = import.meta.env.VITE_SERVER;
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:5000/api/logout", { withCredentials: true });
+      await axios.get(`${API}/api/auth/logout`, { withCredentials: true });
       navigate("/");
       setUser(null);
     } catch (error) {
@@ -58,7 +59,7 @@ const Navbar = () => {
               </Link> */}
               <div>
                 {
-                  user.type === "admin" ? (
+                  user.type === "admin" || user.type === "superAdmin" ? (
                     <Link to="/admin/students">
                       All Students
                     </Link>

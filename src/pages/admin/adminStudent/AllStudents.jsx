@@ -6,13 +6,16 @@ import "./AllStudents.css";
 export default function AllStudents() {
     const [students, setStudents] = useState([]);
     const navigate = useNavigate();
+    const API = import.meta.env.VITE_SERVER;
 
     useEffect(() => {
         axios
-            .get("http://localhost:5000/api/admin/allstudents", {
+            .get(`${API}/api/admin/student`, {
                 withCredentials: true,
             })
-            .then((res) => setStudents(res.data))
+            .then((res) => {
+                setStudents(res.data.students);
+            })
             .catch((err) => console.error(err));
     }, []);
 

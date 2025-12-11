@@ -8,14 +8,15 @@ export default function StudentProfile() {
     const [student, setStudent] = useState(null);
     const [isEditing, setIsEditing] = useState(false);
     const [image, setImage] = useState("");
+    const API = import.meta.env.VITE_SERVER;
 
     useEffect(() => {
         axios
-            .get(`http://localhost:5000/api/admin/student/${id}`, {
+            .get(`${API}/api/admin/student/${id}`, {
                 withCredentials: true,
             })
             .then((res) => {
-                setStudent(res.data)
+                setStudent(res.data.student)
                 setImage(res.data.photo);
             })
             .catch((err) => console.error(err));
@@ -29,7 +30,7 @@ export default function StudentProfile() {
 
         axios
             .put(
-                `http://localhost:5000/api/admin/updatestudents/${regId}`,
+                `${API}/api/admin/student/${regId}`,
                 student,
                 { withCredentials: true }
             )

@@ -4,9 +4,10 @@ import "./Alumni.css";
 
 export default function Alumni() {
   const [alumniData, setAlumniData] = useState([]);
+  const API = import.meta.env.VITE_SERVER;
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/alumni")
+    fetch(`${API}/api/alumni`)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {

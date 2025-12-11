@@ -6,15 +6,16 @@ import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
   const [id, setid] = useState("221000110057");
-  const [password, setPassword] = useState("221000110057");
+  const [password, setPassword] = useState("Shovan@2001");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const { user, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
+  const  API = import.meta.env.VITE_SERVER;
 
   useEffect(() => {
     if (user) {
-      if(user.type === "admin") {
+      if(user.type === "admin"  || user.type === "superAdmin") {
         navigate("/admin/students");
       } else {
         navigate("/profile");
@@ -32,7 +33,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/login",
+        `${API}/api/auth/login`,
         { id, password },
         { withCredentials: true }
       );

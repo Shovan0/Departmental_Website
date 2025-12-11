@@ -6,12 +6,12 @@ const DetailsWithQuery = () => {
   const navigate = useNavigate();
   const [studentDB, setStudentDB] = useState(null);
   const [error, setError] = useState("");
-  const API_URI = import.meta.env.API_URI;
+  const API = import.meta.env.VITE_SERVER;
 
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/profile", {
+        const response = await fetch(`${API}/api/profile`, {
           method: "GET",
           credentials: "include", // SEND COOKIE
         });
@@ -23,12 +23,12 @@ const DetailsWithQuery = () => {
 
         const data = await response.json();
 
-        if (!data?.basic) {
+        if (!data?.data.basic) {
           setError("Invalid response from server.");
           return;
         }
 
-        setStudentDB(data);
+        setStudentDB(data.data);
       } catch (error) {
         console.error("Error fetching profile:", error);
         setError("Server error.");
