@@ -32,15 +32,18 @@
 
 /* ===== FACULTY CARD ===== */
 .faculty-card {
+  position: relative;
   background: #ffffffcc;
   border-radius: 18px;
-  padding: 30px 25px;
+  padding: 30px 25px 70px; /* extra bottom space */
+  min-height: 420px; /* makes card taller */
   text-align: center;
   border: 1px solid #ebebeb;
   backdrop-filter: blur(8px);
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
 
 .faculty-card:hover {
   transform: translateY(-5px);
@@ -102,6 +105,77 @@
 .award-btn:hover {
   background: #084fc1;
 }
+/* Card positioning */
+.faculty-card {
+  position: relative;
+}
+
+/* Delete button (top-right) */
+.delete-icon-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #b71c1c;
+  cursor: pointer;
+}
+
+.delete-icon-btn:hover {
+  color: #d32f2f;
+}
+
+.edit-small-btn,
+.save-btn {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Edit */
+.edit-small-btn {
+  background: #2e7d32;
+  color: #ffffff;
+}
+
+.edit-small-btn:hover {
+  background: #1b5e20;
+}
+
+/* Save */
+.save-btn {
+  background: #1565c0;
+  color: #ffffff;
+}
+
+.save-btn:hover {
+  background: #0d47a1;
+}
+
+
+.edit-input {
+  width: 92%;
+  padding: 8px 10px;
+  margin: 6px auto;
+  font-size: 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  outline: none;
+}
+
+.edit-input:focus {
+  border-color: #0b61eb;
+  box-shadow: 0 0 0 2px rgba(11, 97, 235, 0.1);
+}
+
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {

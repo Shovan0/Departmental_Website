@@ -27,7 +27,6 @@ const DetailsWithQuery = () => {
           setError("Invalid response from server.");
           return;
         }
-
         setStudentDB(data.data);
       } catch (error) {
         console.error("Error fetching profile:", error);

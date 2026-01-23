@@ -88,7 +88,7 @@ const Login = () => {
 
         <p
           className="forgot-password"
-          onClick={() => alert("Feature under processing...")}
+          onClick={() => navigate("/forgot-password")}
         >
           Forgot Password?
         </p>

@@ -1,14 +1,12 @@
-/* ===== PAGE WRAPPER ===== */
 .alumni-page {
   padding: 60px 70px;
-  /* margin-top: 100px; */
   min-height: 100vh;
-  font-family: "Segoe UI", sans-serif;
   background: linear-gradient(to bottom, #eaf0ff, #ffffff);
+  font-family: "Segoe UI", sans-serif;
 }
 
-/* ===== PAGE HEADER ===== */
 .alumni-header {
+  position: relative;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -16,18 +14,127 @@
 .alumni-title {
   font-size: 42px;
   font-weight: 700;
-  color: #1e1e1e;
 }
 
 .alumni-subtitle {
-  color: #545454;
   font-size: 18px;
+  color: #555;
   margin-top: 10px;
 }
 
-/* ===== GRID LAYOUT ===== */
+.add-alumni-btn {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background: #0b61eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-alumni-btn:hover {
+  background: #084fc1;
+}
+
 .alumni-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 40px;
+}
+
+.alumni-card {
+  position: relative;
+  background: white;
+  border-radius: 18px;
+  padding: 30px 25px 80px;
+  min-height: 420px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.alumni-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.delete-icon-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  color: #b71c1c;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit-small-btn,
+.save-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-small-btn {
+  background: #2e7d32;
+  color: white;
+}
+
+.save-btn {
+  background: #1565c0;
+  color: white;
+}
+
+.edit-input {
+  width: 90%;
+  padding: 8px;
+  margin: 6px auto;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-box {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  width: 400px;
+}
+
+.modal-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.cancel-btn {
+  background: #777;
+  color: white;
+  border: none;
+  padding: 8px 16px;
 }
