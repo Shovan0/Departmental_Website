@@ -12,7 +12,7 @@ import ApplyCertificate from "./pages/profile/forms/ApplyCertificate.jsx";
 import ApplyNOC from "./pages/profile/forms/ApplyNOC.jsx";
 import ApplyQuery from "./pages/profile/forms/ApplyQuery.jsx";
 import Login from "./pages/login/Login.jsx";
-import ForgetPassword from "./pages/forgetPassword/ForgetPassword.jsx";
+import ForgotPassword from "./pages/forgotPassword/ForgotPassword.jsx";
 import "./App.css";
 
 import AllStudents from "./pages/admin/adminStudent/AllStudents.jsx";
@@ -37,7 +37,7 @@ function App() {
           <Route path="/profile/applyNOC" element={<ApplyNOC />} />
           <Route path="/profile/applyQuery" element={<ApplyQuery />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/forgot-password" element={<ForgetPassword />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/admin/students" element={<AllStudents />} />
           <Route path="/student/:id" element={<StudentProfile />} />
         </Routes>
