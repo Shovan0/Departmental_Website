@@ -5,8 +5,8 @@ import "./Login.css";
 import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
-  const [id, setid] = useState("s221000110057");
-  const [password, setPassword] = useState("s221000110057");
+  const [id, setid] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const { user, setUser } = useContext(AuthContext);
