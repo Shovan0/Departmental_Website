@@ -141,7 +141,7 @@ export default function Alumni() {
     <div className="alumni-page">
       {/* ================= HEADER ================= */}
       <div className="alumni-header">
-        <h1 className="alumni-title">Our Alumni</h1>
+        <h1 className="alumni-title">Alumni</h1>
         <p className="alumni-subtitle">
           Distinguished alumni of our institution
         </p>

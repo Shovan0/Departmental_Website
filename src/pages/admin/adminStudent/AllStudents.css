@@ -9,20 +9,46 @@
 }
 
 .student-card {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 16px;
-  width: 250px;
   position: relative;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
 .student-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
 }
+
+/* DELETE BUTTON */
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #dc2626;
+}
+
+.view-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 
 .student-card h3 {
   margin-top: 0;

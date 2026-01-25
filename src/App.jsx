@@ -13,6 +13,7 @@ import ApplyNOC from "./pages/profile/forms/ApplyNOC.jsx";
 import ApplyQuery from "./pages/profile/forms/ApplyQuery.jsx";
 import Login from "./pages/login/Login.jsx";
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword.jsx";
+import AddStudent from "./pages/admin/adminStudent/AddStudent.jsx";
 import "./App.css";
 
 import AllStudents from "./pages/admin/adminStudent/AllStudents.jsx";
@@ -39,6 +40,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/admin/students" element={<AllStudents />} />
+          <Route path="/admin/add-student" element={<AddStudent />} />
           <Route path="/student/:id" element={<StudentProfile />} />
         </Routes>
       </div>

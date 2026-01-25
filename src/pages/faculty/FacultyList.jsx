@@ -119,7 +119,7 @@ function FacultyList() {
 
   return (
     <div className="faculty-page">
-      <h1 className="faculty-title">Our Faculty Members</h1>
+      <h1 className="faculty-title">Faculty Members</h1>
 
       <div className="faculty-grid">
         {faculty.map((f) => (
